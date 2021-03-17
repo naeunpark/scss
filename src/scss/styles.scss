@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;600;700;800;900&display=swap');
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+}
+
+header {
+  background-color: #F0F0F0;
+  width: $hederSize;
+  height: 100vh;
+  position: fixed;
+  padding: 5.5vh 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h1{
+    text-transform: uppercase;
+    font-size: 5vw;
+    font-weight: 300;
+    line-height: 5vw;
+    transform: scaleY(0.70);
+    color: $mainColor;
+    margin-right: $headerMainPadding;
+  }
+  div {
+    > * {
+      margin-bottom: 3vh;
+    }
+    p {
+      color: $mainColor;
+      font-weight: 600;
+      margin-right: $headerMainPadding;
+    }
+    p:first-child {
+      font-size: 22px;
+    }
+    p:nth-child(2) {
+      text-align: justify;
+      font-weight: 600;
+    }
+    nav{
+      a{
+        text-decoration: none;
+        color: $linkColor;
+        font-weight: 600;
+        font-size: 14px;
+        border-bottom: 1px solid $linkColor;
+        margin: 0 1em .3em 0;
+        padding-bottom: 3px;
+        display: inline-block;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+main {
+  position: relative;
+  margin-left: $hederSize;
+  width: 100%;
+  section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#D84238, #E7473C);
+    .wrapper{
+      margin: 10vw 0;
+      .movie_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 10px;
+        color: #fff;
+        h4 {
+          font-size: 26px;
+        }
+      }
+      .image {
+        width: 50vw;
+        height: 25vw;
+        background-size: cover;
+        background-position: center;
+        box-shadow: $shadow;
+      }
+    }
+  }
+}
